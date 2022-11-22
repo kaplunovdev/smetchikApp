@@ -15,15 +15,23 @@ export const SmetaList = () => {
     return (
         <>
 
-            <Text style={{ textAlign: 'center', marginTop: 10, elevation: 0 }}>Список пуст</Text>
-            <View style={{ flex: 1 }}>
+            {/* <Text style={{ textAlign: 'center', marginTop: 10, elevation: 0 }}>Список пуст</Text> */}
+            <View style={styles.container}>
                 <ScrollView style={styles.listSmets}>
-                    <Text style={styles.smetsItem}>Поляковское 16А</Text>
                     <Text style={styles.smetsItem}>Сызранова 2Б</Text>
-                    <Text style={styles.smetsItem}>Ленина 14</Text>
+                    <Text style={styles.smetsItem}>Сызранова 2Б</Text>
+                    <Text style={styles.smetsItem}>Сызранова 2Б</Text>
+                    <Text style={styles.smetsItem}>Сызранова 2Б</Text>
+                    <Text style={styles.smetsItem}>Сызранова 2Б</Text>
+                    <Text style={styles.smetsItem}>Сызранова 2Б</Text>
+                    <Text style={styles.smetsItem}>Сызранова 2Б</Text>
+                    <Text style={styles.smetsItem}>Сызранова 2Б</Text>
+
+
                 </ScrollView>
+                <NewSmetaModal />
             </View>
-            <NewSmetaModal />
+
         </>
     )
 };
@@ -40,10 +48,13 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     listSmets: {
+
         display: 'flex',
         flexDirection: 'column',
         marginTop: 20,
-        flex: 1
+        maxHeight: '78%',
+
+
 
     },
     smetsItem: {
@@ -51,7 +62,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         backgroundColor: '#fff',
         padding: 20,
-        borderRadius: 10,
+        borderRadius: 20,
         textShadowColor: '#ccc',
         color: '#303030',
         marginBottom: 20,
@@ -60,7 +71,14 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 20
 
+    },
+    container: {
+        position: 'relative',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        paddingBottom: 30
     }
+}
 
-})
+)
 

@@ -16,21 +16,21 @@ import {
 } from 'react-native';
 
 
-const NewSmetaModal = () => {
+export const NewSmetaModal = () => {
     const [visible, setVisible] = useState(false);
 
     return (
 
         < >
             <Button
-                title='+'
+                title='Создать'
                 style={styles.buttonModal}
                 onPress={() => setVisible(true)}
             />
             <Dialog
                 visible={visible}
                 onDismiss={() => setVisible(false)}
-                style={{ marginTop: 100 }}
+                style={styles.container}
             >
                 <DialogHeader title="Новая смета" />
                 <DialogContent >
@@ -58,17 +58,16 @@ const NewSmetaModal = () => {
 };
 
 const styles = StyleSheet.create({
-    modal: {
-        marginTop: 100
 
-    },
 
     buttonModal: {
+        width: 150,
+        padding: 5,
         position: 'absolute',
-        right: 10,
-        top: 8,
-
-    }
+        bottom: 40,
+        left: '50%',
+        transform: [{ translateX: -75 }],
+    },
 
 })
 
